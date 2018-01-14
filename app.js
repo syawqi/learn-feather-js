@@ -13,7 +13,7 @@ app.use('todo', {
 
 function getTodo(name) {
   const service = app.service('todo');
-  const todo = service.get(name).then(
+  service.get(name).then(
     message => {
       console.log(message.name);
   });
